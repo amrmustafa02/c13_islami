@@ -47,7 +47,7 @@ class _LayoutPageState extends State<LayoutPage> {
           BottomNavigationBarItem(
             icon: CustomNavBarItem(
               selectedIndex: selectedIndex,
-              navBarItem: 0,
+              navBarItemIndex: 0,
               iconPath: AppAssets.quranIcn,
             ),
             label: "Quran",
@@ -55,7 +55,7 @@ class _LayoutPageState extends State<LayoutPage> {
           BottomNavigationBarItem(
             icon: CustomNavBarItem(
               selectedIndex: selectedIndex,
-              navBarItem: 1,
+              navBarItemIndex: 1,
               iconPath: AppAssets.hadithIcn,
             ),
             label: "Hadith",
@@ -63,7 +63,7 @@ class _LayoutPageState extends State<LayoutPage> {
           BottomNavigationBarItem(
             icon: CustomNavBarItem(
               selectedIndex: selectedIndex,
-              navBarItem: 2,
+              navBarItemIndex: 2,
               iconPath: AppAssets.sbhaIcn,
             ),
             label: "Sbha",
@@ -71,7 +71,7 @@ class _LayoutPageState extends State<LayoutPage> {
           BottomNavigationBarItem(
             icon: CustomNavBarItem(
               selectedIndex: selectedIndex,
-              navBarItem: 3,
+              navBarItemIndex: 3,
               iconPath: AppAssets.radioIcn,
             ),
             label: "Radio",
@@ -79,7 +79,7 @@ class _LayoutPageState extends State<LayoutPage> {
           BottomNavigationBarItem(
             icon: CustomNavBarItem(
               selectedIndex: selectedIndex,
-              navBarItem: 4,
+              navBarItemIndex: 4,
               iconPath: AppAssets.timesIcn,
             ),
             label: "Times",

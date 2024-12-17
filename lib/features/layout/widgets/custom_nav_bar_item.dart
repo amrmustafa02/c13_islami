@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 
 class CustomNavBarItem extends StatelessWidget {
   final int selectedIndex;
-  final int navBarItem;
+  final int navBarItemIndex;
   final String iconPath;
 
   const CustomNavBarItem({
     super.key,
     required this.selectedIndex,
-    required this.navBarItem,
+    required this.navBarItemIndex,
     required this.iconPath,
   });
 
@@ -19,7 +19,7 @@ class CustomNavBarItem extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(25),
-        color: selectedIndex == navBarItem
+        color: selectedIndex == navBarItemIndex
             ? AppColors.secondaryColor.withValues(
                 alpha: 0.5,
               )
