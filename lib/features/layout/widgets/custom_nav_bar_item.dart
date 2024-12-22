@@ -20,9 +20,7 @@ class CustomNavBarItem extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(25),
         color: selectedIndex == navBarItemIndex
-            ? AppColors.secondaryColor.withValues(
-                alpha: 0.5,
-              )
+            ? AppColors.secondaryColor.withOpacity(0.5)
             : Colors.transparent,
       ),
       child: ImageIcon(
