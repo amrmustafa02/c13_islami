@@ -1,5 +1,6 @@
 import 'package:c13_sat_islami/core/constants/app_assets.dart';
 import 'package:c13_sat_islami/core/theme/app_colors.dart';
+import 'package:c13_sat_islami/features/layout/quran/quran_details_view.dart';
 import 'package:c13_sat_islami/features/layout/quran/widgets/recent_card_widget.dart';
 import 'package:c13_sat_islami/features/layout/quran/widgets/sura_card_widget.dart';
 import 'package:c13_sat_islami/models/recent_sura_data.dart';
@@ -179,8 +180,26 @@ class QuranTab extends StatelessWidget {
             ListView.separated(
               shrinkWrap: true,
               physics: NeverScrollableScrollPhysics(),
-              itemBuilder: (context, index) => SuraCardWidget(
-                suraDataModel: suraList[index],
+              itemBuilder: (context, index) => GestureDetector(
+                onTap: () {
+                  // Navigator.push(
+                  //   context,
+                  //   MaterialPageRoute(
+                  //     builder: (context) => QuranDetailsView(
+                  //       suraDataModel: suraList[index],
+                  //     ),
+                  //   ),
+                  // );
+
+                  Navigator.pushNamed(
+                    context,
+                    QuranDetailsView.routeName,
+                    arguments: suraList[index],
+                  );
+                },
+                child: SuraCardWidget(
+                  suraDataModel: suraList[index],
+                ),
               ),
               separatorBuilder: (context, index) => Divider(
                 indent: 60,

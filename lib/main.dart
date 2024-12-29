@@ -1,3 +1,4 @@
+import 'package:c13_sat_islami/features/layout/quran/quran_details_view.dart';
 import 'package:c13_sat_islami/features/splash/pages/splash_page.dart';
 import 'package:flutter/material.dart';
 
@@ -16,12 +17,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: SplashPage.routeName,
       routes: {
-        SplashPage.routeName: (_) {
-          return SplashPage();
-        },
-        LayoutPage.routeName: (_) {
-          return LayoutPage();
-        },
+        SplashPage.routeName: (_) => SplashPage(),
+        LayoutPage.routeName: (_) => LayoutPage(),
+        QuranDetailsView.routeName: (_) => QuranDetailsView(),
       },
     );
   }
