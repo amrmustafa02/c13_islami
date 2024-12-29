@@ -1,13 +1,13 @@
-import 'package:c13_sat_islami/core/constants/app_assets.dart';
-import 'package:c13_sat_islami/core/theme/app_colors.dart';
-import 'package:c13_sat_islami/features/layout/pages/hadith_tab.dart';
-import 'package:c13_sat_islami/features/layout/pages/quran_tab.dart';
-import 'package:c13_sat_islami/features/layout/pages/radio_tab.dart';
-import 'package:c13_sat_islami/features/layout/pages/sbha_tab.dart';
-import 'package:c13_sat_islami/features/layout/pages/times_tab.dart';
 import 'package:flutter/material.dart';
 
-import '../widgets/custom_nav_bar_item.dart';
+import '/core/constants/app_assets.dart';
+import '/core/theme/app_colors.dart';
+import 'hadeth/hadith_tab.dart';
+import 'quran/quran_tab.dart';
+import 'radio/radio_tab.dart';
+import 'tasbeh/sbha_tab.dart';
+import 'time/times_tab.dart';
+import 'widgets/custom_nav_bar_item.dart';
 
 class LayoutPage extends StatefulWidget {
   static String routeName = "/layout";
