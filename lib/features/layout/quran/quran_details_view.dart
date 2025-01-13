@@ -50,41 +50,43 @@ class _QuranDetailsViewState extends State<QuranDetailsView> {
             ),
           ),
         ),
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            SizedBox(height: 30),
-            Text(
-              data.nameAR,
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontFamily: "Janna",
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-                color: AppColors.primaryColor,
-              ),
-            ),
-            SizedBox(height: 20),
-            Expanded(
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                child: ListView.builder(
-                  itemBuilder: (context, index) => Text(
-                    "[${index + 1}] ${versesList[index]}",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      height: 1.8,
-                      fontFamily: "Janna",
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: AppColors.primaryColor,
-                    ),
-                  ),
-                  itemCount: versesList.length,
+        body: SafeArea(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              SizedBox(height: 30),
+              Text(
+                data.nameAR,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontFamily: "Janna",
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: AppColors.primaryColor,
                 ),
               ),
-            ),
-          ],
+              SizedBox(height: 20),
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                  child: ListView.builder(
+                    itemBuilder: (context, index) => Text(
+                      "[${index + 1}] ${versesList[index]}",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        height: 1.8,
+                        fontFamily: "Janna",
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: AppColors.primaryColor,
+                      ),
+                    ),
+                    itemCount: versesList.length,
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

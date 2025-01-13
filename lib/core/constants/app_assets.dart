@@ -1,5 +1,6 @@
 abstract class AppAssets {
   static String splashBG = "assets/images/splash_bg.png";
+  static String islamiLogo = "assets/images/islami_logo.png";
   static String splashGlow = "assets/images/splash_glow.png";
   static String splashLeftShape = "assets/images/splash_left_shape.png";
   static String splashRightShape = "assets/images/splash_right_shape.png";

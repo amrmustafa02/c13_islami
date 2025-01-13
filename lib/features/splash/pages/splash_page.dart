@@ -1,5 +1,8 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:c13_sat_islami/core/constants/app_assets.dart';
+import 'package:c13_sat_islami/core/constants/local_storage_keys.dart';
+import 'package:c13_sat_islami/core/services/local_storage_service.dart';
+import 'package:c13_sat_islami/features/onboarding/pages/on_boarding_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../layout/layout_page.dart';
@@ -24,9 +27,12 @@ class _SplashPageState extends State<SplashPage> {
     Future.delayed(
       Duration(seconds: 2),
       () {
+        var isFirstTime =
+            LocalStorageService.getBool(LocalStorageKeys.isFirstTimeRun) ??
+                true;
         Navigator.pushReplacementNamed(
           context,
-          LayoutPage.routeName,
+          isFirstTime ? OnBoardingScreen.routeName : LayoutPage.routeName,
         );
       },
     );

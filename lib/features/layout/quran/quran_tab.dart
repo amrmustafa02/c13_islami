@@ -22,6 +22,7 @@ class QuranTab extends StatelessWidget {
       suraVersesNumber: "7",
     ),
   ];
+
   List<SuraDataModel> suraList = [
     SuraDataModel(id: 1, nameEN: "Al-Fatihah", nameAR: "الفاتحه", verses: 7),
     SuraDataModel(id: 2, nameEN: "Al-Baqarah", nameAR: "البقرة", verses: 286),
@@ -71,6 +72,7 @@ class QuranTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
     return Container(
       width: double.infinity,
       height: double.infinity,
@@ -86,7 +88,10 @@ class QuranTab extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Image.asset("assets/images/islami_logo.png"),
+            Image.asset(
+              "assets/images/islami_logo.png",
+              height: size.height * 0.1,
+            ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: TextFormField(
@@ -151,7 +156,7 @@ class QuranTab extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 155,
+              height: 160,
               child: ListView.separated(
                 padding: EdgeInsets.symmetric(horizontal: 20.0),
                 scrollDirection: Axis.horizontal,
@@ -159,7 +164,7 @@ class QuranTab extends StatelessWidget {
                   suraData: recentSuraList[index],
                 ),
                 separatorBuilder: (context, index) => SizedBox(
-                  width: 15,
+                  width: 16,
                 ),
                 itemCount: recentSuraList.length,
               ),
@@ -182,15 +187,6 @@ class QuranTab extends StatelessWidget {
               physics: NeverScrollableScrollPhysics(),
               itemBuilder: (context, index) => GestureDetector(
                 onTap: () {
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(
-                  //     builder: (context) => QuranDetailsView(
-                  //       suraDataModel: suraList[index],
-                  //     ),
-                  //   ),
-                  // );
-
                   Navigator.pushNamed(
                     context,
                     QuranDetailsView.routeName,

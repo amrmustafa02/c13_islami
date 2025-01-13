@@ -5,4 +5,5 @@ abstract class AppColors {
   static Color secondaryColor = Color(0xff202020);
   static Color white = Color(0xffFFFFFF);
   static Color titleTextColor = Color(0xFFFEFFE8);
+  static Color darkGrey = Color(0xFF707070);
 }
