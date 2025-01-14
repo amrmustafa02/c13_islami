@@ -144,5 +144,7 @@ class Assets {
   static const String imagesSplashLeftShape = 'assets/images/splash_left_shape.png';
   static const String imagesSplashLogo = 'assets/images/splash_logo.png';
   static const String imagesSplashRightShape = 'assets/images/splash_right_shape.png';
+  static const String imagesSuraDetailsFooter = 'assets/images/sura_details_footer.png';
+  static const String imagesSuraDetailsHeader = 'assets/images/sura_details_header.png';
 
 }

@@ -18,4 +18,8 @@ abstract class AppAssets {
   static String numberIcn = "assets/icons/number_icn.png";
   static String quranDetailsBackground =
       "assets/images/soura_details_screen.png";
+  static const String quranDetailsHeader =
+      "assets/images/sura_details_header.png";
+  static const String quranDetailsFooter =
+      "assets/images/sura_details_footer.png";
 }

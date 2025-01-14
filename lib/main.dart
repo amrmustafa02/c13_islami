@@ -1,4 +1,5 @@
 import 'package:c13_sat_islami/core/services/local_storage_service.dart';
+import 'package:c13_sat_islami/core/theme/app_colors.dart';
 import 'package:c13_sat_islami/features/layout/quran/quran_details_view.dart';
 import 'package:c13_sat_islami/features/onboarding/pages/on_boarding_screen.dart';
 import 'package:c13_sat_islami/features/splash/pages/splash_page.dart';
@@ -24,6 +25,15 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       initialRoute: SplashPage.routeName,
+      theme: ThemeData(
+        useMaterial3: true,
+        appBarTheme: AppBarTheme(
+          scrolledUnderElevation: 0,
+        ),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: AppColors.primaryColor,
+        ),
+      ),
       routes: {
         SplashPage.routeName: (_) => SplashPage(),
         OnBoardingScreen.routeName: (_) => OnBoardingScreen(),

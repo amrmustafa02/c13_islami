@@ -72,8 +72,9 @@ class _SbhaTabState extends State<SbhaTab> {
                         child: Stack(
                           alignment: Alignment.center,
                           children: [
-                            Transform.rotate(
-                              angle: angle,
+                            AnimatedRotation(
+                              turns: angle,
+                              duration: Duration(milliseconds: 500),
                               child: Image.asset(
                                 "assets/images/sebhaBody.png",
                                 width: size.width * 0.70,
@@ -105,7 +106,7 @@ class _SbhaTabState extends State<SbhaTab> {
 
   _onSbhaTap() {
     counter++;
-    angle -= 1;
+    angle += (1/30);
 
     if (counter == 33) {
       counter = 0;
