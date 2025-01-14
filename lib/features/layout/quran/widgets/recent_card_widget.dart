@@ -1,10 +1,11 @@
 import 'package:c13_sat_islami/core/constants/app_assets.dart';
 import 'package:c13_sat_islami/core/theme/app_colors.dart';
 import 'package:c13_sat_islami/models/recent_sura_data.dart';
+import 'package:c13_sat_islami/models/sura_data_model.dart';
 import 'package:flutter/material.dart';
 
 class RecentCardWidget extends StatelessWidget {
-  final RecentSuraData suraData;
+  final SuraDataModel suraData;
 
   const RecentCardWidget({
     super.key,
@@ -25,7 +26,7 @@ class RecentCardWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Text(
-                suraData.suraNameEN,
+                suraData.nameEN,
                 style: TextStyle(
                   fontFamily: "Janna",
                   fontSize: 24,
@@ -33,7 +34,7 @@ class RecentCardWidget extends StatelessWidget {
                 ),
               ),
               Text(
-                suraData.suraNameAR,
+                suraData.nameAR,
                 style: TextStyle(
                   fontFamily: "Janna",
                   fontSize: 24,
@@ -41,7 +42,7 @@ class RecentCardWidget extends StatelessWidget {
                 ),
               ),
               Text(
-                "${suraData.suraVersesNumber} Verses",
+                "${suraData.verses} Verses",
                 style: TextStyle(
                   fontFamily: "Janna",
                   fontSize: 14,

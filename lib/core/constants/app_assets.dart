@@ -13,6 +13,7 @@ abstract class AppAssets {
   static String radioIcn = "assets/icons/radio.png";
   static String timesIcn = "assets/icons/times.png";
   static String hadithBG = "assets/images/hadith_bg.png";
+  static String sbhaBG = "assets/images/sbha_bg.png";
   static String recentImg = "assets/images/recent_icn.png";
   static String numberIcn = "assets/icons/number_icn.png";
   static String quranDetailsBackground =

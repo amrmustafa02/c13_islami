@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:shared_preferences/shared_preferences.dart';
 
 abstract class LocalStorageService {
@@ -11,6 +9,10 @@ abstract class LocalStorageService {
 
   static Future<bool> setString(String key, String value) async {
     return await _preferences.setString(key, value);
+  }
+
+  static Future<bool> setList(String key, List<String> values) async {
+    return await _preferences.setStringList(key, values);
   }
 
   static Future<bool> setInt(String key, int value) async {
@@ -31,5 +33,13 @@ abstract class LocalStorageService {
 
   static String? getString(String key) {
     return _preferences.getString(key);
+  }
+
+  static List<String>? getStringList(String key) {
+    return _preferences.getStringList(key);
+  }
+
+  static Future<bool> remove(String key) async {
+    return await _preferences.remove(key);
   }
 }

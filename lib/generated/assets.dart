@@ -134,6 +134,9 @@ class Assets {
   static const String imagesOnboarding5 = 'assets/images/onboarding_5.png';
   static const String imagesQuranBg = 'assets/images/quran_bg.png';
   static const String imagesRecentIcn = 'assets/images/recent_icn.png';
+  static const String imagesSbhaBg = 'assets/images/sbha_bg.png';
+  static const String imagesSbhaHeader = 'assets/images/sbha_header.png';
+  static const String imagesSebhaBody = 'assets/images/sebhaBody.png';
   static const String imagesSouraDetailsScreen = 'assets/images/soura_details_screen.png';
   static const String imagesSplashBg = 'assets/images/splash_bg.png';
   static const String imagesSplashBrand = 'assets/images/splash_brand.png';
